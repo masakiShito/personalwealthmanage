@@ -12,8 +12,8 @@
 	<artifactId>personalwealthmanage</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>housebook</name>
-	<description>housebook project for Spring Boot</description>
+	<name>personalwealthmanage</name>
+	<description>personalwealthmanage project for Spring Boot</description>
 	<properties>
 		<java.version>17</java.version>
 		<maven.compiler.source>17</maven.compiler.source>

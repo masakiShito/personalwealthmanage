@@ -1,13 +1,13 @@
-package com.spring.project.housebook;
+package com.spring.project.personalwealthmanage;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class HousebookApplication {
+public class personalwealthmanageApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HousebookApplication.class, args);
+		SpringApplication.run(personalwealthmanageApplication.class, args);
 	}
 
 }
