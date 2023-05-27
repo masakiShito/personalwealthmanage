@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  xmlns:th="http://www.thymeleaf.org"
+  th:fragment="layout(title, content)"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      th:href="@{/css/style.css}"
+      href="../../static/css/style.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <title>ユーザ一覧画面</title>
+  </head>
+  <body class="list-body">
+    <div class="table-container">
+      <h1 class="table-title">ユーザ一覧</h1>
+      <div class="link-container">
+        <a href="../pwm_002.html" th:href="@{/}" class="menu-link"
+          >トップページ</a
+        >
+        <a
+          href="../users/creationForm.html"
+          th:href="@{/users/creationForm}"
+          class="menu-link"
+          >ユーザ作成</a
+        >
+      </div>
+      <table class="styled-table">
+        <thead>
+          <tr>
+            <th>ユーザ名</th>
+            <th>権限</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr th:each="user : ${userList}">
+            <td th:text="${user.userNm}">(username)</td>
+            <td th:text="${user.userAuth}">(authority)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

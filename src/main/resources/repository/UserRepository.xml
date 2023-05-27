@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.spring.project.personalwealthmanage.domain.mapper.UserRepository">
+	<select id="findByUserId" resultType="com.spring.project.personalwealthmanage.domain.entity.User">
+		select 
+		  * 
+		from
+		  m_users
+		where
+		  user_id = #{userId}
+		  and del_flg = '0'
+	</select>
+</mapper>

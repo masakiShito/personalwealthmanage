@@ -1,0 +1,11 @@
+/* 全画面で使用する共通的な設定はこのスタイルシートに記載する*/
+
+/* margin-top調節*/
+.mt-10 {
+  margin-top: 10px;
+}
+
+/* margin-bottom調節*/
+.mb-10 {
+  margin-bottom: 10px;
+}

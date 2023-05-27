@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="jp" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+        th:href="@{/css/login.css}"
+        href="../static/css/login.css"
+        rel="stylesheet"
+        type="text/css"
+        />
+        <link
+        th:href="@{/css/common.css}"
+        href="../static/css/common.css"
+        rel="stylesheet"
+        type="text/css"
+        />
+    <title>ログイン | 個人資産管理システム</title>
+</head>
+<body>
+    <div class="container">
+        <h2>ログイン</h2>
+        <div th:if="${param.error}" class="error-message">
+            <p>ユーザIDまたは、パスワードが違います。</p>
+        </div>
+        <form id="loginForm"th:action="@{/pwm_001}" method="post">
+            <div class="mb-10">
+                <label for="username">ユーザID</label>
+            </div>
+            <input type="text" id="username" name="username" required autofocus>
+            <div class="mb-10">
+                <label for="password">パスワード</label>
+            </div>
+            <input type="password" id="password" name="password" required>
+            <div class="mt-10">
+                <button id="loginBtn" type="submit">ログイン</button>
+            </div>
+
+        </form>
+    </div>
+    <script src="../static/js/login.js" th:src="@{/js/login.js}"></script>
+</body>
+</html>
